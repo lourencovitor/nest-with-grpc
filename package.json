@@ -5,8 +5,10 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@grpc/grpc-js": "^1.8.10",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/microservices": "^9.3.9",
     "@nestjs/platform-express": "^9.0.0",
     "axios": "^1.0.0",
     "reflect-metadata": "^0.1.13",

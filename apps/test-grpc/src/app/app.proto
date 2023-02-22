@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package app;
+
+service UserService {
+  rpc Create (User) returns (User);
+  rpc Update (User) returns (User);
+  rpc Delete (UserById) returns (User);
+  rpc Get (UserById) returns (User);
+  rpc List (google.protobuf.Empty) returns (Users) {};
+}
+
+message UserById {
+  int32 id = 1;
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message Users {
+  repeated User users = 1;
+}
+

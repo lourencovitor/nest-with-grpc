@@ -13,9 +13,10 @@
         "outputPath": "dist/apps/test-grpc",
         "main": "apps/test-grpc/src/main.ts",
         "tsConfig": "apps/test-grpc/tsconfig.app.json",
-        "assets": ["apps/test-grpc/src/assets"],
+        "assets": ["apps/test-grpc/src/assets", "apps/test-grpc/src/app/app.proto"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/test-grpc/webpack.config.js"
+        "webpackConfig": "apps/test-grpc/webpack.config.js",
+        "watchAssets": true
       },
       "configurations": {
         "production": {

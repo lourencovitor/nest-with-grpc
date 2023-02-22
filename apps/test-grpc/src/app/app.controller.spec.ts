@@ -13,11 +13,20 @@ describe('AppController', () => {
     }).compile();
   });
 
-  describe('getData', () => {
-    it('should return "Welcome to test-grpc!"', () => {
+  describe('list', () => {
+    it('should return list users', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getData()).toEqual({
-        message: 'Welcome to test-grpc!',
+      expect(appController.list()).toEqual({ users: [] });
+    });
+  });
+
+  describe('create', () => {
+    it('should return list users', () => {
+      const appController = app.get<AppController>(AppController);
+      expect(appController.create({ id: 1, name: 'John', age: 23 })).toEqual({
+        id: 1,
+        name: 'John',
+        age: 23,
       });
     });
   });
